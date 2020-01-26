@@ -29,7 +29,7 @@ class ChildrenRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var ChildEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, null, ChildEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, null, ChildEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -65,7 +65,7 @@ class ChildrenRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var ChildEntity $result */
-			$result = $this->databaseConnector->queryFirstPrepared( $query, $arguments, ChildEntity::class );
+			$result = $this->databaseConnector->queryFirst( $query, $arguments, ChildEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -107,7 +107,7 @@ class ChildrenRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var ChildEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, $arguments, ChildEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, $arguments, ChildEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -149,7 +149,7 @@ class ChildrenRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var ChildEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, $arguments, ChildEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, $arguments, ChildEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )

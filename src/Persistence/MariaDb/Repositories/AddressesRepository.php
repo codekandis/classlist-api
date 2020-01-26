@@ -28,7 +28,7 @@ class AddressesRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var AddressEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, null, AddressEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, null, AddressEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -64,7 +64,7 @@ class AddressesRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var AddressEntity $result */
-			$result = $this->databaseConnector->queryFirstPrepared( $query, $arguments, AddressEntity::class );
+			$result = $this->databaseConnector->queryFirst( $query, $arguments, AddressEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -105,7 +105,7 @@ class AddressesRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var AddressEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, $arguments, AddressEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, $arguments, AddressEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -146,7 +146,7 @@ class AddressesRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var AddressEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, $arguments, AddressEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, $arguments, AddressEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )

@@ -28,7 +28,7 @@ class EmailsRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var EmailEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, null, EmailEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, null, EmailEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -64,7 +64,7 @@ class EmailsRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var EmailEntity $result */
-			$result = $this->databaseConnector->queryFirstPrepared( $query, $arguments, EmailEntity::class );
+			$result = $this->databaseConnector->queryFirst( $query, $arguments, EmailEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -105,7 +105,7 @@ class EmailsRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var EmailEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, $arguments, EmailEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, $arguments, EmailEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -146,7 +146,7 @@ class EmailsRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var EmailEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, $arguments, EmailEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, $arguments, EmailEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )

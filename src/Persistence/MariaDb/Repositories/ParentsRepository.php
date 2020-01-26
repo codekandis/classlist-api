@@ -31,7 +31,7 @@ class ParentsRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var ParentEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, null, ParentEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, null, ParentEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -67,7 +67,7 @@ class ParentsRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var ParentEntity $result */
-			$result = $this->databaseConnector->queryFirstPrepared( $query, $arguments, ParentEntity::class );
+			$result = $this->databaseConnector->queryFirst( $query, $arguments, ParentEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -109,7 +109,7 @@ class ParentsRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var ParentEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, $arguments, ParentEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, $arguments, ParentEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -151,7 +151,7 @@ class ParentsRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var ParentEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, $arguments, ParentEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, $arguments, ParentEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -193,7 +193,7 @@ class ParentsRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var ParentEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, $arguments, ParentEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, $arguments, ParentEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -235,7 +235,7 @@ class ParentsRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var ParentEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, $arguments, ParentEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, $arguments, ParentEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )

@@ -28,7 +28,7 @@ class TeachersRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var TeacherEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, null, TeacherEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, null, TeacherEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -64,7 +64,7 @@ class TeachersRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var TeacherEntity $result */
-			$result = $this->databaseConnector->queryFirstPrepared( $query, $arguments, TeacherEntity::class );
+			$result = $this->databaseConnector->queryFirst( $query, $arguments, TeacherEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -96,7 +96,7 @@ class TeachersRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var TeacherEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, null, TeacherEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, null, TeacherEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -138,7 +138,7 @@ class TeachersRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var TeacherEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, $arguments, TeacherEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, $arguments, TeacherEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )

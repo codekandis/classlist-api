@@ -28,7 +28,7 @@ class PhoneNumbersRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var PhoneNumberEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, null, PhoneNumberEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, null, PhoneNumberEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -64,7 +64,7 @@ class PhoneNumbersRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var PhoneNumberEntity $result */
-			$result = $this->databaseConnector->queryFirstPrepared( $query, $arguments, PhoneNumberEntity::class );
+			$result = $this->databaseConnector->queryFirst( $query, $arguments, PhoneNumberEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -105,7 +105,7 @@ class PhoneNumbersRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var PhoneNumberEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, $arguments, PhoneNumberEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, $arguments, PhoneNumberEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
@@ -146,7 +146,7 @@ class PhoneNumbersRepository extends AbstractRepository
 		{
 			$this->databaseConnector->beginTransaction();
 			/** @var PhoneNumberEntity[] $resultSet */
-			$resultSet = $this->databaseConnector->queryPrepared( $query, $arguments, PhoneNumberEntity::class );
+			$resultSet = $this->databaseConnector->query( $query, $arguments, PhoneNumberEntity::class );
 			$this->databaseConnector->commit();
 		}
 		catch ( PersistenceException $exception )
