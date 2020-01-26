@@ -27,7 +27,9 @@
 	},
 	"require": {
 		"php": "^7.3",
-		"codekandis/tiphy": "^0"
+		"codekandis/tiphy": "^0",
+		"codekandis/sentry-client": "dev-development",
+		"codekandis/tiphy-sentry-client-integration": "^0"
 	},
 	"require-dev": {
 		"roave/security-advisories": "dev-master",
