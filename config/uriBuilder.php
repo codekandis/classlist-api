@@ -3,7 +3,7 @@ namespace CodeKandis\ClassListApi\Configurations;
 
 return [
 	'schema'       => 'https',
-	'host'         => 'classlist-api.codekandis',
+	'host'         => 'api.classlist.codekandis',
 	'baseUri'      => '/',
 	'relativeUris' => [
 		'index'        => '',
