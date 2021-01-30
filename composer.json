@@ -1,0 +1,62 @@
+{
+	"name": "codekandis/classlist-api",
+	"description": "This is an API for school classlist appliations.",
+	"keywords": [
+		"php",
+		"class list api",
+		"class",
+		"list",
+		"api"
+	],
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Christian Ramelow",
+			"email": "info@codekandis.net",
+			"homepage": "https://codekandis.net",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"email": "info@codekandis.net",
+		"issues": "https://github.com/codekandis/classlist-api/issues",
+		"docs": "https://github.com/codekandis/classlist-api/blob/master/README.md",
+		"source": "https://github.com/codekandis/classlist-api/tree/master"
+	},
+	"require": {
+		"php": "^7.3",
+		"codekandis/tiphy": "^0",
+		"codekandis/sentry-client": "dev-development",
+		"codekandis/tiphy-sentry-client-integration": "^0"
+	},
+	"require-dev": {
+		"roave/security-advisories": "dev-master",
+		"sensiolabs/security-checker": "^6",
+		"phpunit/phpunit": "^8"
+	},
+	"repositories": {
+	},
+	"autoload": {
+		"psr-4": {
+			"CodeKandis\\ClassListApi\\": [
+				"config/",
+				"public/",
+				"src/"
+			]
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"CodeKandis\\ClassListApi\\Tests\\": [
+				"tests/"
+			]
+		}
+	},
+	"scripts": {
+		"post-update-cmd": [
+			"[ ${COMPOSER_DEV_MODE} -eq 0 ] || vendor/bin/security-checker security:check composer.lock"
+		]
+	}
+}
