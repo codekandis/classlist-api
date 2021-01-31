@@ -8,9 +8,19 @@ class ConfigurationRegistry extends AbstractConfigurationRegistry
 {
 	protected function initialize(): void
 	{
-		$this->setSentryClientConfigurationPath( dirname( __DIR__, 2 ) . '/config/sentryClient.php' );
-		$this->setRoutesConfigurationPath( dirname( __DIR__, 2 ) . '/config/routes.php' );
-		$this->setPersistenceConfigurationPath( dirname( __DIR__, 2 ) . '/config/persistence.php' );
-		$this->setUriBuilderConfigurationPath( dirname( __DIR__, 2 ) . '/config/uriBuilder.php' );
+		$this->setPlainSentryClientConfiguration(
+			require dirname( __DIR__, 2 ) . '/config/sentryClient.php'
+		);
+		$this->setPlainRoutesConfiguration(
+			( require dirname( __DIR__, 2 ) . '/config/routes.php' )
+			+ ( require __DIR__ . '/Plain/routes.php' )
+		);
+		$this->setPlainPersistenceConfiguration(
+			require dirname( __DIR__, 2 ) . '/config/persistence.php'
+		);
+		$this->setPlainUriBuilderConfiguration(
+			( require dirname( __DIR__, 2 ) . '/config/uriBuilder.php' )
+			+ ( require __DIR__ . '/Plain/uriBuilder.php' )
+		);
 	}
 }
