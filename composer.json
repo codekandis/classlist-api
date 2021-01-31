@@ -8,7 +8,7 @@
 		"list",
 		"api"
 	],
-	"minimum-stability": "dev",
+	"minimum-stability": "stable",
 	"prefer-stable": true,
 	"license": "MIT",
 	"authors": [
@@ -26,17 +26,13 @@
 		"source": "https://github.com/codekandis/classlist-api/tree/master"
 	},
 	"require": {
-		"php": "^7.3",
+		"php": "^7.4",
 		"codekandis/tiphy": "^0",
-		"codekandis/sentry-client": "dev-development",
 		"codekandis/tiphy-sentry-client-integration": "^0"
 	},
 	"require-dev": {
 		"roave/security-advisories": "dev-master",
-		"sensiolabs/security-checker": "^6",
-		"phpunit/phpunit": "^8"
-	},
-	"repositories": {
+		"codekandis/phpunit": "^3"
 	},
 	"autoload": {
 		"psr-4": {
@@ -53,10 +49,5 @@
 				"tests/"
 			]
 		}
-	},
-	"scripts": {
-		"post-update-cmd": [
-			"[ ${COMPOSER_DEV_MODE} -eq 0 ] || vendor/bin/security-checker security:check composer.lock"
-		]
 	}
 }

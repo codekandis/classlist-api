@@ -6,29 +6,29 @@ use CodeKandis\Tiphy\Entities\AbstractEntity;
 class ParentEntity extends AbstractEntity
 {
 	/** @var string */
-	public $uri = '';
+	public string $canonicalUri = '';
 
 	/** @var string */
-	public $id = '';
+	public string $id = '';
 
 	/** @var string */
-	public $gender = '';
+	public string $gender = '';
 
 	/** @var string */
-	public $forename = '';
+	public string $forename = '';
 
 	/** @var string */
-	public $lastname = '';
+	public string $lastname = '';
 
 	/** @var string[] */
-	public $addresses = [];
+	public array $addresses = [];
 
 	/** @var string[] */
-	public $phoneNumbers = [];
+	public array $phoneNumbers = [];
 
 	/** @var string[] */
-	public $emails = [];
+	public array $emails = [];
 
 	/** @var string[] */
-	public $children = [];
+	public array $children = [];
 }

@@ -6,17 +6,17 @@ use CodeKandis\Tiphy\Entities\AbstractEntity;
 class EmailEntity extends AbstractEntity
 {
 	/** @var string */
-	public $uri = '';
+	public string $canonicalUri = '';
 
 	/** @var string */
-	public $id = '';
+	public string $id = '';
 
 	/** @var string */
-	public $email = '';
+	public string $email = '';
 
 	/** @var string[] */
-	public $parents = [];
+	public array $parents = [];
 
 	/** @var string[] */
-	public $teachers = [];
+	public array $teachers = [];
 }

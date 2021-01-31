@@ -6,26 +6,26 @@ use CodeKandis\Tiphy\Entities\AbstractEntity;
 class ChildEntity extends AbstractEntity
 {
 	/** @var string */
-	public $uri = '';
+	public string $canonicalUri = '';
 
 	/** @var string */
-	public $id = '';
+	public string $id = '';
 
 	/** @var string */
-	public $gender = '';
+	public string $gender = '';
 
 	/** @var string */
-	public $forename = '';
+	public string $forename = '';
 
 	/** @var string */
-	public $lastname = '';
+	public string $lastname = '';
 
 	/** @var string */
-	public $dateOfBirth = '';
+	public string $dateOfBirth = '';
 
 	/** @var string[] */
-	public $parents = [];
+	public array $parents = [];
 
 	/** @var string[] */
-	public $teachers = [];
+	public array $teachers = [];
 }

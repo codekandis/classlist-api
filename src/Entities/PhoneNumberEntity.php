@@ -6,17 +6,20 @@ use CodeKandis\Tiphy\Entities\AbstractEntity;
 class PhoneNumberEntity extends AbstractEntity
 {
 	/** @var string */
-	public $uri = '';
+	public string $canonicalUri = '';
 
 	/** @var string */
-	public $id = '';
+	public string $id = '';
 
 	/** @var string */
-	public $type = '';
+	public string $type = '';
 
 	/** @var string */
-	public $number = '';
+	public string $number = '';
 
 	/** @var string[] */
-	public $parents = [];
+	public array $parents = [];
+
+	/** @var string[] */
+	public array $teachers = [];
 }
