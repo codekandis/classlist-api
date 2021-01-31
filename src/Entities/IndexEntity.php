@@ -6,23 +6,23 @@ use CodeKandis\Tiphy\Entities\AbstractEntity;
 class IndexEntity extends AbstractEntity
 {
 	/** @var string */
-	public $uri = '';
+	public string $canonicalUri = '';
 
 	/** @var string */
-	public $childrenUri = '';
+	public string $childrenUri = '';
 
 	/** @var string */
-	public $parentsUri = '';
+	public string $parentsUri = '';
 
 	/** @var string */
-	public $teachersUri = '';
+	public string $teachersUri = '';
 
 	/** @var string */
-	public $addressesUri = '';
+	public string $addressesUri = '';
 
 	/** @var string */
-	public $phoneNumbersUri = '';
+	public string $phoneNumbersUri = '';
 
 	/** @var string */
-	public $emailsUri = '';
+	public string $emailsUri = '';
 }
