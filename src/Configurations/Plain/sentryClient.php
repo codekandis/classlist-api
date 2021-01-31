@@ -2,5 +2,5 @@
 namespace CodeKandis\ClassListApi\Configurations\Plain;
 
 return [
-	'release' => '0.3.0'
+	'release' => '0.3.2'
 ];
