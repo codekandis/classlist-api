@@ -7,66 +7,66 @@ class ApiUriBuilder extends AbstractUriBuilder
 {
 	public function getIndexUri(): string
 	{
-		return $this->getUri( 'index' );
+		return $this->build( 'index' );
 	}
 
 	public function getChildrenUri(): string
 	{
-		return $this->getUri( 'children' );
+		return $this->build( 'children' );
 	}
 
 	public function getChildUri( string $id ): string
 	{
-		return $this->getUri( 'child', $id );
+		return $this->build( 'child', $id );
 	}
 
 	public function getParentsUri(): string
 	{
-		return $this->getUri( 'parents' );
+		return $this->build( 'parents' );
 	}
 
 	public function getParentUri( string $id ): string
 	{
-		return $this->getUri( 'parent', $id );
+		return $this->build( 'parent', $id );
 	}
 
 	public function getTeachersUri(): string
 	{
-		return $this->getUri( 'teachers' );
+		return $this->build( 'teachers' );
 	}
 
 	public function getTeacherUri( string $id ): string
 	{
-		return $this->getUri( 'teacher', $id );
+		return $this->build( 'teacher', $id );
 	}
 
 	public function getAddressesUri(): string
 	{
-		return $this->getUri( 'addresses' );
+		return $this->build( 'addresses' );
 	}
 
 	public function getAddressUri( string $id ): string
 	{
-		return $this->getUri( 'address', $id );
+		return $this->build( 'address', $id );
 	}
 
 	public function getPhoneNumbersUri(): string
 	{
-		return $this->getUri( 'phoneNumbers' );
+		return $this->build( 'phoneNumbers' );
 	}
 
 	public function getPhoneNumberUri( string $id ): string
 	{
-		return $this->getUri( 'phoneNumber', $id );
+		return $this->build( 'phoneNumber', $id );
 	}
 
 	public function getEmailsUri(): string
 	{
-		return $this->getUri( 'emails' );
+		return $this->build( 'emails' );
 	}
 
 	public function getEmailUri( string $id ): string
 	{
-		return $this->getUri( 'email', $id );
+		return $this->build( 'email', $id );
 	}
 }
