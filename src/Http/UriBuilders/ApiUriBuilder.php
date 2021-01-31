@@ -3,69 +3,69 @@ namespace CodeKandis\ClassListApi\Http\UriBuilders;
 
 use CodeKandis\Tiphy\Http\UriBuilders\AbstractUriBuilder;
 
-class ApiUriBuilder extends AbstractUriBuilder
+class ApiUriBuilder extends AbstractUriBuilder implements ApiUriBuilderInterface
 {
-	public function getIndexUri(): string
+	public function buildIndexUri(): string
 	{
 		return $this->build( 'index' );
 	}
 
-	public function getChildrenUri(): string
+	public function buildChildrenUri(): string
 	{
 		return $this->build( 'children' );
 	}
 
-	public function getChildUri( string $id ): string
+	public function buildChildUri( string $id ): string
 	{
 		return $this->build( 'child', $id );
 	}
 
-	public function getParentsUri(): string
+	public function buildParentsUri(): string
 	{
 		return $this->build( 'parents' );
 	}
 
-	public function getParentUri( string $id ): string
+	public function buildParentUri( string $id ): string
 	{
 		return $this->build( 'parent', $id );
 	}
 
-	public function getTeachersUri(): string
+	public function buildTeachersUri(): string
 	{
 		return $this->build( 'teachers' );
 	}
 
-	public function getTeacherUri( string $id ): string
+	public function buildTeacherUri( string $id ): string
 	{
 		return $this->build( 'teacher', $id );
 	}
 
-	public function getAddressesUri(): string
+	public function buildAddressesUri(): string
 	{
 		return $this->build( 'addresses' );
 	}
 
-	public function getAddressUri( string $id ): string
+	public function buildAddressUri( string $id ): string
 	{
 		return $this->build( 'address', $id );
 	}
 
-	public function getPhoneNumbersUri(): string
+	public function buildPhoneNumbersUri(): string
 	{
 		return $this->build( 'phoneNumbers' );
 	}
 
-	public function getPhoneNumberUri( string $id ): string
+	public function buildPhoneNumberUri( string $id ): string
 	{
 		return $this->build( 'phoneNumber', $id );
 	}
 
-	public function getEmailsUri(): string
+	public function buildEmailsUri(): string
 	{
 		return $this->build( 'emails' );
 	}
 
-	public function getEmailUri( string $id ): string
+	public function buildEmailUri( string $id ): string
 	{
 		return $this->build( 'email', $id );
 	}
